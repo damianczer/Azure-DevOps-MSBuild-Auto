@@ -1,7 +1,7 @@
 Do you have a **BIG** solution? <br />
 More than **100** projects? <br />
 Don't you use **Docker Containers** and have to build the whole solution? <br />
-Does it take a lot of time to build the entire soluition through **Pipeline Azure DevOps**? <br />
+Does it take a lot of time to build the entire solution through **Pipeline Azure DevOps**? <br />
 Are you waiting more than **20 minutes** even the changes were minimal? <br />
 
 Here is the Solution! <br />
