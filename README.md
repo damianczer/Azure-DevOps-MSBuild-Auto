@@ -6,6 +6,15 @@ Are you waiting more than 20 minutes and the changes were minimal? <br />
 
 Here is the Solution! <br />
 
+Before:
+
+![image](https://github.com/user-attachments/assets/8f72e8f9-7fcf-4d71-9df4-f183edb814d9)
+
+After:
+
+![image](https://github.com/user-attachments/assets/5e4e6e01-9a2e-46bd-8d34-cfdec00700ec)
+
+Configuration:
 
 ![image](https://github.com/user-attachments/assets/446de0d0-5a15-41ef-8f04-c93038bb91e4)
 
