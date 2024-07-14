@@ -22,4 +22,9 @@ Pipeline Variables:
 
 ![image](https://github.com/user-attachments/assets/2106bb8b-8bea-4547-80a3-7f95292a5488)
 
+MSBuild Configuration:
+
+![image](https://github.com/user-attachments/assets/b4f653cf-312c-47dd-8bce-5c26afea8ac4)
+
+
 
