@@ -7,8 +7,8 @@
 param(
     [string]$CompareSourceBranch,
     [string]$BranchName,
-	[string]$Repository,
-	[string]$TargetBranch
+    [string]$Repository,
+    [string]$TargetBranch
 )
 
 Write-Host `n'SCRIPT STARTED'`n -ForegroundColor Green
