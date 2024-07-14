@@ -67,6 +67,7 @@ foreach($element in $changedFilesList) {
 
     if($element.Contains("/code"))
     {
+
 	$index = $element.LastIndexOf("/code")
 		
 	if ($index -ge 0) 
@@ -77,12 +78,12 @@ foreach($element in $changedFilesList) {
 			
 		#Look for the .csproj file for every element: EXAMPLE (src/Feature/FeatureName) = C:\GIT\YourRepository\YourProject\src\Feature\FeatureName\FeatureName.csproj
 		$projectsList += Get-ChildItem -Path "$cutElement" -Filter "*.csproj" -Recurse | ForEach-Object { $_.FullName }	
-        }
-    }
+  }
+  }
 		
     if($element.Contains("/Frontend"))
     {
-	$hasFrontendChanged = 1
+	     $hasFrontendChanged = 1
     }  
 }
 
