@@ -73,7 +73,7 @@ foreach($element in $changedFilesList) {
 	{	
 		#Example: src/Feature/FeatureName/code/Models/Model.cs
 		#Result: src/Feature/FeatureName
-        	$cutElement = $element.Substring(0, $index)
+    	$cutElement = $element.Substring(0, $index)
 			
 		#Look for the .csproj file for every element: EXAMPLE (src/Feature/FeatureName) = C:\GIT\YourRepository\YourProject\src\Feature\FeatureName\FeatureName.csproj
 		$projectsList += Get-ChildItem -Path "$cutElement" -Filter "*.csproj" -Recurse | ForEach-Object { $_.FullName }	
