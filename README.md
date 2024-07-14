@@ -5,3 +5,7 @@ Does it take a lot of time to build the entire soluition through Pipeline Azure 
 Are you waiting more than 20 minutes and the changes were minimal? <br />
 
 Here is the Solution! <br />
+
+
+![image](https://github.com/user-attachments/assets/446de0d0-5a15-41ef-8f04-c93038bb91e4)
+
