@@ -26,5 +26,8 @@ MSBuild Configuration:
 
 ![image](https://github.com/user-attachments/assets/b4f653cf-312c-47dd-8bce-5c26afea8ac4)
 
+Call **MSBuild** inside **Build.proj** with our global variable (list od changed projects) instead of Solution File (.sln):
+
+![image](https://github.com/user-attachments/assets/72fd32b6-4f1c-41cb-b460-f48729d5b1bf)
 
 
