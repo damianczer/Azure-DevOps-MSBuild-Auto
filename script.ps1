@@ -63,29 +63,27 @@ Write-Host `n'LIST OF CHANGED FILES:'`n  -ForegroundColor Green
 
 foreach($element in $changedFilesList) {
 
-	$element
-
     #Adapt to your project structure:
 
     if($element.Contains("/code"))
-	{
-		$index = $element.LastIndexOf("/code")
+    {
+	$index = $element.LastIndexOf("/code")
 		
-		if ($index -ge 0) 
-		{	
-			#Example: src/Feature/FeatureName/code/Models/Model.cs
-			#Result: src/Feature/FeatureName
+	if ($index -ge 0) 
+	{	
+		#Example: src/Feature/FeatureName/code/Models/Model.cs
+		#Result: src/Feature/FeatureName
         	$cutElement = $element.Substring(0, $index)
 			
-			#Look for the .csproj file for every element: EXAMPLE (src/Feature/FeatureName) = C:\GIT\YourRepository\YourProject\src\Feature\FeatureName\FeatureName.csproj
-			$projectsList += Get-ChildItem -Path "$cutElement" -Filter "*.csproj" -Recurse | ForEach-Object { $_.FullName }	
-    	}
+		#Look for the .csproj file for every element: EXAMPLE (src/Feature/FeatureName) = C:\GIT\YourRepository\YourProject\src\Feature\FeatureName\FeatureName.csproj
+		$projectsList += Get-ChildItem -Path "$cutElement" -Filter "*.csproj" -Recurse | ForEach-Object { $_.FullName }	
+        }
     }
 		
-	if($element.Contains("/Frontend"))
-	{
-		$hasFrontendChanged = 1
-	}  
+    if($element.Contains("/Frontend"))
+    {
+	$hasFrontendChanged = 1
+    }  
 }
 
 if([string]::IsNullOrEmpty($projectsList))
