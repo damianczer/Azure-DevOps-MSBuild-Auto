@@ -14,7 +14,12 @@ After:
 
 ![image](https://github.com/user-attachments/assets/5e4e6e01-9a2e-46bd-8d34-cfdec00700ec)
 
-Configuration:
+Step Configuration:
 
 ![image](https://github.com/user-attachments/assets/446de0d0-5a15-41ef-8f04-c93038bb91e4)
+
+Pipeline Variables:
+
+![image](https://github.com/user-attachments/assets/2106bb8b-8bea-4547-80a3-7f95292a5488)
+
 
