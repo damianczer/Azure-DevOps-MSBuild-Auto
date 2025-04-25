@@ -33,7 +33,3 @@ Call **MSBuild** inside **Build.proj** with our global variable (list of changed
 ![image](https://github.com/user-attachments/assets/72fd32b6-4f1c-41cb-b460-f48729d5b1bf)
 
 If your deployment method allows you to _"copy only changed files/projects/.dlls"_ -> **let's do it!** Don't build the whole soloution, build what has changed! If the projects are dependent on each other - references will be built! This is just a proposal for a solution/optimization of software delivery to the client server.
-
-Please note that the code of this application is copyrighted and cannot be used for personal purposes. You must obtain permission from the author in order to use the code.
-
-
