@@ -1,4 +1,4 @@
-# Azure DevOps Pipeline Boost - replace for Docker Containers? (Replace for not properly configured CI/CD)
+# Azure DevOps Pipeline Boost - replace for Docker Containers? (replace for not properly configured CI/CD)
 
 ![GitHub stars](https://img.shields.io/github/stars/damianczer/azure-devops-msbuild-auto?style=social) <br>
 ![GitHub watchers](https://img.shields.io/github/watchers/damianczer/azure-devops-msbuild-auto?style=social) <br>
@@ -8,8 +8,11 @@
 
 Technology: <br><br>
 PowerShell  - https://learn.microsoft.com/en-us/powershell/ <br> 
+
 MSBuild - https://learn.microsoft.com/en-us/visualstudio/msbuild/?view=vs-2022 <br>
+
 Azure DevOps & Pipeline - https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops <br>
+
 CI/CD - https://learn.microsoft.com/en-us/azure/devops/pipelines/architectures/devops-pipelines-baseline-architecture?view=azure-devops
 
 Script optimizes **CI/CD** and improves software delivery performance. **MsBuild** accepts as input a soluition file, which can contain up to hundreds of projects, this means that every attempt to deliver a software package to some host has to end with building the entire solution? <br>
