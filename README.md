@@ -4,9 +4,10 @@
 ![GitHub watchers](https://img.shields.io/github/watchers/damianczer/azure-devops-msbuild-auto?style=social) <br>
 ![GitHub issues](https://img.shields.io/github/issues/damianczer/azure-devops-msbuild-auto?style=flat-square) <br>
 
-**Authors:** [Damian Czerwiński](https://github.com/damianczer/)
+**Author:** [Damian Czerwiński](https://github.com/damianczer/)
 
-Technology: <br><br>
+**Technology:** 
+<br><br>
 PowerShell  - https://learn.microsoft.com/en-us/powershell/ <br> 
 
 MSBuild - https://learn.microsoft.com/en-us/visualstudio/msbuild/?view=vs-2022 <br>
