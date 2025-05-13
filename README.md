@@ -1,68 +1,96 @@
-# Azure DevOps Pipeline Boost - replace for Docker Containers? (replace for not properly configured CI/CD)
+# 🚀 Azure DevOps Pipeline Boost  
+**Optimize CI/CD for Legacy Projects Without Docker or Proper CI/CD Configuration**
 
-![GitHub stars](https://img.shields.io/github/stars/damianczer/azure-devops-msbuild-auto?style=social) <br>
-![GitHub watchers](https://img.shields.io/github/watchers/damianczer/azure-devops-msbuild-auto?style=social) <br>
-![GitHub issues](https://img.shields.io/github/issues/damianczer/azure-devops-msbuild-auto?style=flat-square) <br>
+![⭐ GitHub stars](https://img.shields.io/github/stars/damianczer/azure-devops-msbuild-auto?style=social)  
+![👀 GitHub watchers](https://img.shields.io/github/watchers/damianczer/azure-devops-msbuild-auto?style=social)  
+![🐞 GitHub issues](https://img.shields.io/github/issues/damianczer/azure-devops-msbuild-auto?style=flat-square)  
 
-**Author:** [Damian Czerwiński](https://github.com/damianczer/)
+---
 
-**Technology:** 
-<br><br>
-PowerShell  - https://learn.microsoft.com/en-us/powershell/ <br> 
+## 👤 **Author**  
+[Damian Czerwiński](https://github.com/damianczer/)
 
-MSBuild - https://learn.microsoft.com/en-us/visualstudio/msbuild/?view=vs-2022 <br>
+---
 
-Azure DevOps & Pipeline - https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops <br>
+## 🛠️ **Technology Stack**  
+- **PowerShell** - [Documentation](https://learn.microsoft.com/en-us/powershell/)  
+- **MSBuild** - [Documentation](https://learn.microsoft.com/en-us/visualstudio/msbuild/?view=vs-2022)  
+- **Azure DevOps & Pipelines** - [Documentation](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops)  
+- **CI/CD** - [Documentation](https://learn.microsoft.com/en-us/azure/devops/pipelines/architectures/devops-pipelines-baseline-architecture?view=azure-devops)  
 
-CI/CD - https://learn.microsoft.com/en-us/azure/devops/pipelines/architectures/devops-pipelines-baseline-architecture?view=azure-devops
+---
 
-Script optimizes **CI/CD** and improves software delivery performance. **MsBuild** accepts as input a soluition file, which can contain up to hundreds of projects, this means that every attempt to deliver a software package to some host has to end with building the entire solution? <br>
+## 📝 **Overview**  
+This script optimizes **CI/CD** pipelines by building only the projects that have changed, instead of rebuilding the entire solution. It is especially useful for:  
+- **Large solutions** with **100+ projects**  
+- **Legacy projects** without Docker or properly configured CI/CD  
+- Reducing build times in **Azure DevOps Pipelines**  
 
-Even if I have a small change in one project?
-<br>
+---
 
-Well, no!<br>
+## ⚡ **Why Use This Script?**  
+- **Save Time:** ⏱️ Reduce build times by up to **20 minutes**!  
+- **Selective Builds:** 🛠️ Build only the projects that have changed.  
+- **Customizable:** 🔧 Adaptable to your project structure.  
+- **Legacy-Friendly:** 🏛️ Works even without modern CI/CD tools like Docker.  
 
-The script detects what changes have occurred compared to the indicated branch, example: we are working on a **feature branch** - then we create a **pull request to the develop** and **from the develop we push(build)** the package to the server. So, the develop will compare to the **master** and build selected projects from the solution - those that need rebuilding. As it turns out, it speeds up the work a lot. <br>
+---
 
-This solution has its conditions - **the main application may be in legacy projects where CI/CD does not work according to the art and there is no budget for its configuration**.
+## 🛠️ **How It Works**  
+1. **Detect Changes:** Compares the current branch with the target branch to identify changed files.  
+2. **Filter Projects:** Extracts the list of projects (`.csproj`) affected by the changes.  
+3. **Set Variables:** Passes the list of changed projects to MSBuild for selective building.  
 
-Is just an example of a solution - it can be customized for the specifics of the project.
+---
 
-Do you have a **BIG** solution? <br />
-More than **100** projects? <br />
-Don't you use **Docker Containers** or **CI/CD** and have to build the whole solution? <br />
-Does it take a lot of time to build the entire solution through **Pipeline Azure DevOps**? <br />
-Are you waiting more than **20 minutes** even the changes were minimal? <br />
+## 📊 **Before vs After**  
+### **Before:**  
+Building the entire solution, even for small changes.  
+![Before](https://github.com/user-attachments/assets/8f72e8f9-7fcf-4d71-9df4-f183edb814d9)  
 
-Here is the Solution! <br />
+### **After:**  
+Building only the changed projects.  
+![After](https://github.com/user-attachments/assets/5e4e6e01-9a2e-46bd-8d34-cfdec00700ec)  
 
-Before:
+---
 
-![image](https://github.com/user-attachments/assets/8f72e8f9-7fcf-4d71-9df4-f183edb814d9)
+## 🛠️ **Setup Instructions**  
+1. Clone the repository.  
+2. Configure the script parameters:  
+   - `CompareSourceBranch`  
+   - `BranchName`  
+   - `Repository`  
+   - `TargetBranch`  
+3. Run the script in your Azure DevOps pipeline.  
 
-After:
+---
 
-![image](https://github.com/user-attachments/assets/5e4e6e01-9a2e-46bd-8d34-cfdec00700ec)
+## 📦 **Pipeline Configuration**  
+### **Step Configuration:**  
+![Step Configuration](https://github.com/user-attachments/assets/446de0d0-5a15-41ef-8f04-c93038bb91e4)  
 
-(Almost 20 minutes less)
+### **Pipeline Variables:**  
+![Pipeline Variables](https://github.com/user-attachments/assets/2106bb8b-8bea-4547-80a3-7f95292a5488)  
 
-Step Configuration:
+### **MSBuild Configuration:**  
+![MSBuild Configuration](https://github.com/user-attachments/assets/b4f653cf-312c-47dd-8bce-5c26afea8ac4)  
 
-![image](https://github.com/user-attachments/assets/446de0d0-5a15-41ef-8f04-c93038bb91e4)
+---
 
-Pipeline Variables:
+## 🧩 **How to Use MSBuild with This Script**  
+Instead of building the entire solution (`.sln`), pass the list of changed projects to MSBuild:  
+```xml
+<Project>
+  <Target Name="Build">
+    <MSBuild Projects="$(projects)" />
+  </Target>
+</Project>
+```
 
-![image](https://github.com/user-attachments/assets/2106bb8b-8bea-4547-80a3-7f95292a5488)
+---
 
-MSBuild Configuration:
+## 🎉 **Enjoy Faster Builds!**  
+If your deployment method allows copying only changed files/projects, this script will save you time and resources.  
+**Don't build the whole solution—build only what has changed!**  
 
-![image](https://github.com/user-attachments/assets/b4f653cf-312c-47dd-8bce-5c26afea8ac4)
-
-Call **MSBuild** inside **Build.proj** with our global variable (list of changed projects) instead of Solution File (.sln):
-
-![image](https://github.com/user-attachments/assets/72fd32b6-4f1c-41cb-b460-f48729d5b1bf)
-
-If your deployment method allows you to _"copy only changed files/projects/.dlls"_ -> **let's do it!** Don't build the whole soloution, build what has changed! If the projects are dependent on each other - references will be built! This is just a proposal for a solution/optimization of software delivery to the client server.
-
-Enjoy!
+---
